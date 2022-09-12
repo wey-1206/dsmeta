@@ -5,12 +5,31 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  
 }
 
 body,
 html {
-  background-color: #000;
-  color: #fff;
+    background-color: #000;
+    background-image: linear-gradient(90deg, #411a17,#172e3c, #372141, #23403c,#1c3426  );
+    background-size: 660% 100%;
+    color: #fff;
+    animation: bgAnimatedGradient 120s infinite linear;
+}
+@keyframes bgAnimatedGradient{
+  0%{
+    background-position: 0 85%;
+  }
+  50%{
+    background-position: 100% 20%;
+  }
+  85%{
+    background-size: 1200%;
+
+  }
+  100%{
+    background-position: 0% 850%;
+  }
 }
 
 a,
