@@ -33,7 +33,7 @@ import com.twilio.type.PhoneNumber;
 			Sale sale = saleRepository.findById(saleId).get();
 			
 			String date = sale.getDate().getMonth() + "/" + sale.getDate().getYear();
-			String msg = "o Vendedor " + sale.getSellerName() + " foi destaque em " + date  + " com um total de R$"+ String.format("%.2f", sale.getAmount()); 
+			String msg = "O vendedor " + sale.getSellerName() + "foi um destaque no mês de: " + date  + "- Valor de fechamento: R$"+ String.format("%.2f", sale.getAmount()); 
 			
 			Twilio.init(twilioSid, twilioKey);
 
